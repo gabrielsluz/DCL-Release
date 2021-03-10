@@ -20,4 +20,5 @@ jac-crun ${GPU_ID} scripts/trainval_tube_v2.py --desc clevrer/desc_nscl_derender
     --batch-size 1 --epoch 100 --validation-interval 5 \
     --prefix prp_dataset_stage \
     --dataset_stage 1 \
+    --use-gpu False \ #Alterar
     #--data_train_length 1000

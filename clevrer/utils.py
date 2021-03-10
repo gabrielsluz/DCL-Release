@@ -1,6 +1,7 @@
 import pickle
 import json
 import sys
+sys.path.append('/datasets/Jacinle/jaclearn/vision/coco')
 import pycocotools.mask as mask
 import copy
 import pycocotools.mask as cocoMask

@@ -1,4 +1,4 @@
-python scripts/script_gen_tube_proposals.py \
+python3 scripts/script_gen_tube_proposals.py \
     --start_index 10000 \
     --end_index 15000 \
     --attr_w 0.6 \
