@@ -9,3 +9,6 @@ Requires:
 - Annotations
 - Objects masks and attributes => are used for the proposals
 
+Command:
+
+./prepare_dataset.sh original_clevrer_path dcl_clevrer_path
