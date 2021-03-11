@@ -58,5 +58,5 @@ if __name__=='__main__':
         if os.path.isdir(new_path):
             print("Skipped")
             continue
-        #os.makedirs(new_path, exist_ok=True)
-        #os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")
+        os.makedirs(new_path, exist_ok=True)
+        os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")

@@ -16,4 +16,6 @@ echo "Questions done"
 cp -R ${OLD_DIR}/derender_proposals/. ${NEW_DIR}/proposals
 echo "Proposals done"
 
-python3 process_videos.py ${OLD_DIR} ${NEW_DIR} 25
+python3 process_videos.py ${OLD_DIR} ${NEW_DIR} 25 video_train
+python3 process_videos.py ${OLD_DIR} ${NEW_DIR} 25 video_validation
+python3 process_videos.py ${OLD_DIR} ${NEW_DIR} 25 video_test
