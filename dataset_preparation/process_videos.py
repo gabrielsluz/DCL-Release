@@ -45,11 +45,10 @@ if __name__=='__main__':
     old_dir = sys.argv[1] #clevrer/
     new_dir = sys.argv[2] #dcl_clevrer/
     fps = sys.argv[3] #
+    set_dir = sys.argv[4] # video_train, video_validation or video_test
     #List all video_paths in old_dir, train, test and validation, then extract the frames.
     old_video_path_list = []
-    old_video_path_list += list_videos_in_dir(os.path.join(old_dir, "video_train"))
-    old_video_path_list += list_videos_in_dir(os.path.join(old_dir, "video_val"))#may have to change for video_validation
-    old_video_path_list += list_videos_in_dir(os.path.join(old_dir, "video_test"))
+    old_video_path_list += list_videos_in_dir(os.path.join(old_dir, set_dir))
     
     #Create the video_dir_paths for the new format
     new_video_path_list = gen_new_from_old_paths(old_video_path_list, new_dir)
@@ -57,6 +56,7 @@ if __name__=='__main__':
     for old_path, new_path in zip(old_video_path_list, new_video_path_list):
         print(old_path, new_path)
         if os.path.isdir(new_path):
+            print("Skipped")
             continue
-        os.makedirs(new_path, exist_ok=True)
-        os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")
+        #os.makedirs(new_path, exist_ok=True)
+        #os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")
