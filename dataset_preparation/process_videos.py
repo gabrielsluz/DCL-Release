@@ -55,8 +55,17 @@ if __name__=='__main__':
     
     for old_path, new_path in zip(old_video_path_list, new_video_path_list):
         print(old_path, new_path)
-        if os.path.isdir(new_path):
-            print("Skipped")
-            continue
+        if os.path.isdir(new_path): #Check if it exists
+            if len(os.listdir(new_path)) != 0: #Check if is empty
+                print("Skipped")
+                continue
         os.makedirs(new_path, exist_ok=True)
         os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")
+        #Check if is empty and retry
+        num_retries = 5
+        while len(os.listdir(new_path)) == 0:
+            print("Retry {}".format(num_retries))
+            if num_retries == 0:
+                break
+            num_retries -= 1
+            os.system("ffmpeg -i " +old_path + " -vf fps=" + str(fps) + " " + new_path + "/%d.png -hide_banner -loglevel warning")
