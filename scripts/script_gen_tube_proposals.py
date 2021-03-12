@@ -3,7 +3,7 @@ import pdb
 import os
 import json
 import sys
-sys.path.append('/datasets/Jacinle/jaclearn/vision/coco')
+sys.path.append('/home/gabrielsluz/Jacinle/jaclearn/vision/coco')
 from pycocotools.coco import COCO
 import pycocotools.mask as mask
 import numpy as np
