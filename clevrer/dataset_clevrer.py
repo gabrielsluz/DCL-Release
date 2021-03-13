@@ -1677,10 +1677,10 @@ class blocks_dataset(Dataset):
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
     args = parser.parse_args()
-    args.question_path = '/home/zfchen/code/nsclClevrer/clevrer/questions'
-    args.tube_prp_path = '/home/zfchen/code/nsclClevrer/clevrer/tubeProposals/1.0_1.0' 
-    args.frm_prp_path = '/home/zfchen/code/nsclClevrer/clevrer/proposals' 
-    args.frm_img_path = '/home/zfchen/code/nsclClevrer/clevrer' 
+    args.question_path = '/datasets/dcl_clevrer/questions'
+    args.tube_prp_path = '/datasets/dcl_clevrer/tubeProposalsRelease/1.0_1.0_0.6_0.7' 
+    args.frm_prp_path = '/datasets/dcl_clevrer/proposals' 
+    args.frm_img_path = '/datasets/dcl_clevrer' 
     args.frm_img_num = 4
     args.img_size = 256
     phase = 'train'

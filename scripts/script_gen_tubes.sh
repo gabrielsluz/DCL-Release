@@ -1,9 +1,9 @@
 python3 scripts/script_gen_tube_proposals.py \
-    --start_index 10000 \
-    --end_index 15000 \
+    --start_index 00000 \
+    --end_index 01000 \
     --attr_w 0.6 \
     --match_thre 0.7 \
     --version 2 \
     --visualize_flag 0 \
-    --tube_folder_path ../clevrer/tubeProposalsRelease \
+    --tube_folder_path /datasets/dcl_clevrer/tubeProposalsRelease \
     --use_attr_flag 0 \
