@@ -728,6 +728,7 @@ class clevrerDataset(Dataset):
         return query_info_list, tube_gt_info['tubes']  
 
     def __getitem__model_v2(self, index):
+        print(self.args)
         
         if self.args.visualize_retrieval_id>=0:
             
@@ -1684,6 +1685,7 @@ if __name__=='__main__':
     args.frm_img_num = 4
     args.img_size = 256
     phase = 'train'
+    print(args)
     build_clevrer_dataset(args, phase)
     #dataset = clevrerDataset(args, phase)
     #dataset.parse_concepts_and_attributes()
