@@ -12,3 +12,9 @@ Requires:
 Command:
 
 ./prepare_dataset.sh original_clevrer_path dcl_clevrer_path
+
+
+There are other modifications required:
+- Download parsed_programs from https://drive.google.com/drive/folders/1dydkLN1A9GWTaMK8QaxpWs6Pt4Eszsaw?usp=sharing
+ and correctly set --correct_question_path '../clevrer/parsed_program'\
+- 
