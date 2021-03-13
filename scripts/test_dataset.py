@@ -10,6 +10,15 @@ initialize_dataset(args.dataset, args.version)
 train_dataset = build_clevrer_dataset(args, 'train')
 train_dataloader = train_dataset.make_dataloader(args.batch_size, shuffle=False, drop_last=True, nr_workers=args.data_workers)
 
-for cur_iter, sampled_batch in enumerate(train_dataloader): 
-    print(cur_iter)
-    print(sampled_batch)
+print("Dataset Train len = {}".format(len(train_dataset)))
+train_iter = iter(train_dataloader)
+cur_iter = 0
+while True:
+    try:
+        feed_dict = next(train_iter)
+    except StopIteration: 
+        break
+    except:
+        print("Failed to load item {}".format(cur_iter))
+    cur_iter += 1
+        
