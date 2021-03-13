@@ -1685,7 +1685,7 @@ if __name__=='__main__':
     args.frm_img_num = 4
     args.img_size = 256
     phase = 'train'
-    print(args)
+    print("First print = {}".format(args))
     build_clevrer_dataset(args, phase)
     #dataset = clevrerDataset(args, phase)
     #dataset.parse_concepts_and_attributes()
