@@ -21,5 +21,9 @@ jac-crun ${GPU_ID} scripts/trainval_tube_v2.py --desc clevrer/desc_nscl_derender
     --prefix prp_dataset_stage \
     --dataset_stage 1 \
     --use-gpu True \
-    --correct_question_path '/datasets/dcl_clevrer/parsed_program'\
+    --correct_question_path /datasets/dcl_clevrer/parsed_program \
+    --question_path /datasets/dcl_clevrer/questions \
+    --tube_prp_path /datasets/dcl_clevrer/tubeProposalsRelease/1.0_1.0_0.6_0.7 \
+    --frm_prp_path /datasets/dcl_clevrer/proposals \
+    --frm_img_path /datasets/dcl_clevrer \
     #--data_train_length 1000
