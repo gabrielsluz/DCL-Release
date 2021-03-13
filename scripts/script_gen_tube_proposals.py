@@ -504,7 +504,7 @@ def get_tubes(det_list_org, alpha, use_attr_flag=False, attr_w=1.0):
     return tubes, tube_scores
 
 def extract_tube_v0(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     out_path = os.path.join(opt['tube_folder_path'] , str(opt['connect_w'])+'_'+str(opt['score_w'])+'_'+str(opt['attr_w']))
@@ -545,7 +545,7 @@ def extract_tube_v0(opt):
         #visual_tube_proposals([tube_list, score_list], f_dict, max_obj_num, opt)
 
 def visual_specific_tube(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     #out_path = os.path.join(opt['tube_folder_path'] , str(opt['connect_w'])+'_'+str(opt['score_w']))
@@ -592,7 +592,7 @@ def get_sub_file_list(folder_name, file_type=None):
 
 
 def extract_tube_attribute(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     out_path = os.path.join(opt['tube_folder_new_path'] , str(opt['connect_w'])+'_'+str(opt['score_w']))
@@ -823,7 +823,7 @@ def compute_recall_and_precision(opt):
         tmp_recall =  tmp_correct_num *1.0 / tmp_gt_num 
         tmp_precision =  tmp_correct_num *1.0 / tmp_prp_num 
         if (tmp_recall <1 or tmp_precision <1) and opt['visualize_flag']==1:
-            sample_folder_path= '../clevrer/proposals'
+            sample_folder_path= '/datasets/dcl_clevrer/proposals'
             sample_file = os.path.join(sample_folder_path, 'proposal_'+str(f_id)+'.json')
             fh = open(sample_file, 'r')
             f_dict = json.load(fh)
@@ -918,7 +918,7 @@ def extract_tube_per_video_attribute(f_dict, opt, attr_dict_list):
     return tube_list, score_list, bbx_sc_list  
 
 def extract_tube_v1(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     #out_path = os.path.join(opt['tube_folder_path'] , str(opt['connect_w'])+'_'+str(opt['score_w'])+'_'+str(opt['attr_w'])+'_v1')
@@ -1391,7 +1391,7 @@ def compute_batch_IoU(bbox1_xyxy, bbox2_xyxy):
     return ovr
 
 def extract_tube_v2(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     #out_path = os.path.join(opt['tube_folder_path'] , str(opt['connect_w'])+'_'+str(opt['score_w'])+'_'+str(opt['attr_w'])+'_v1')
@@ -1636,7 +1636,7 @@ def get_tubes_v2(det_list_org, alpha, use_attr_flag=False, attr_w=1.0):
     return tubes, tube_scores
 
 def extract_tube_v3(opt):
-    sample_folder_path= '../clevrer/proposals'
+    sample_folder_path= '/datasets/dcl_clevrer/proposals'
     file_list = get_sub_file_list(sample_folder_path, '.json')
     file_list.sort()
     #out_path = os.path.join(opt['tube_folder_path'] , str(opt['connect_w'])+'_'+str(opt['score_w'])+'_'+str(opt['attr_w'])+'_v1')
