@@ -31,7 +31,6 @@ Failed to load item 2768
 Failed to load item 2955
 """
 
-initialize_dataset(args.dataset, args.version)
 train_dataset = build_clevrer_dataset(args, 'validation')
 train_dataloader = train_dataset.make_dataloader(args.batch_size, shuffle=False, drop_last=True, nr_workers=args.data_workers)
 
@@ -48,7 +47,6 @@ while True:
     cur_iter += 1
         
 
-initialize_dataset(args.dataset, args.version)
 train_dataset = build_clevrer_dataset(args, 'test')
 train_dataloader = train_dataset.make_dataloader(args.batch_size, shuffle=False, drop_last=True, nr_workers=args.data_workers)
 
