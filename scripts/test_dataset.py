@@ -63,8 +63,4 @@ while True:
     except:
         print("Failed to load item {}".format(cur_iter))
     cur_iter += 1
-<<<<<<< HEAD
         
-=======
-        
->>>>>>> ff9d0e58562f47f5da886e855c1d4a40f448b8e5
