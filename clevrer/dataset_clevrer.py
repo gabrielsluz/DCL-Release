@@ -779,7 +779,6 @@ class clevrerDataset(Dataset):
             img, _ = self.img_transform(img, np.array([0, 0, 1, 1]))
             img_list.append(img)
         img_tensor = torch.stack(img_list, 0)
-        print(img_full_path)
         data['img'] = img_tensor 
         data['valid_seq_mask'] = valid_flag_dict
         # resize frame boxes
