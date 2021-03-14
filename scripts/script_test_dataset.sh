@@ -24,4 +24,5 @@ jac-crun 0 scripts/test_dataset.py --desc clevrer/desc_nscl_derender_clevrer_v2.
     --tube_prp_path /datasets/dcl_clevrer/tubeProposalsRelease/1.0_1.0_0.6_0.7 \
     --frm_prp_path /datasets/dcl_clevrer/proposals \
     --frm_img_path /datasets/dcl_clevrer \
+    --data-workers 1 \
     #--data_train_length 1000
