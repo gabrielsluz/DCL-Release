@@ -6,7 +6,7 @@ TUBE_PRP_PATH='/datasets/dcl_clevrer/models/tubeProposalsAttrMatchTest/1.0_1.0_0
 UNSEEN_EVENTS_PATH='/datasets/dcl_clevrer/dynamic_propnet/propnet_predictions_prpAttrV3_noAttr_noEdgeSuperv'
 CORRECT_QUESTION_PATH='/datasets/dcl_clevrer/parsed_program'
 jac-crun ${GPU_ID} scripts/trainval_tube_v2.py --desc clevrer/desc_nscl_derender_clevrer_v2.py\
-    --dataset clevrer --data-dir ../clevrer \
+    --dataset clevrer --data-dir /datasets/dcl_clevrer \
     --batch-size 1 --epoch 100 --validation-interval 5 \
     --save-interval 1 --data-split 0.95 \
     --data-workers 4 \
