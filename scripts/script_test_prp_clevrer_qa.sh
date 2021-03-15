@@ -1,10 +1,10 @@
 GPU_ID=$1
 PREFIX='rgb_sep_prp_ep7'
-TEST_RESULT_PATH='dumps/test_ep7_release_raw.json'
-MODEL_PATH='data/models/DCL_model/epoch_7.pth'
-TUBE_PRP_PATH='data/raw_data/tubeProposalsAttrMatchTest/1.0_1.0_0.6_0.7'
-UNSEEN_EVENTS_PATH='./submodules/clevrer_dynamic_propnet/dumps/annos/val_release_v2_separate_realOffset5_noAttr_noEdgeSuperv'
-CORRECT_QUESTION_PATH='./data/raw_data/results_v2'
+TEST_RESULT_PATH='/datasets/dcl_clevrer/models/test_ep7_release_raw.json'
+MODEL_PATH='/datasets/dcl_clevrer/models/epoch_7.pth'
+TUBE_PRP_PATH='/datasets/dcl_clevrer/models/tubeProposalsAttrMatchTest/1.0_1.0_0.6_0.7'
+UNSEEN_EVENTS_PATH='/datasets/dcl_clevrer/dynamic_propnet/propnet_predictions_prpAttrV3_noAttr_noEdgeSuperv'
+CORRECT_QUESTION_PATH='/datasets/dcl_clevrer/parsed_program'
 jac-crun ${GPU_ID} scripts/trainval_tube_v2.py --desc clevrer/desc_nscl_derender_clevrer_v2.py\
     --dataset clevrer --data-dir ../clevrer \
     --batch-size 1 --epoch 100 --validation-interval 5 \
