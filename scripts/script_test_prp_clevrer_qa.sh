@@ -33,3 +33,6 @@ jac-crun ${GPU_ID} scripts/trainval_tube_v2.py --desc clevrer/desc_nscl_derender
     --tube_prp_path ${TUBE_PRP_PATH} \
     --unseen_events_path ${UNSEEN_EVENTS_PATH} \
     --correct_question_path ${CORRECT_QUESTION_PATH} \
+    --question_path /datasets/dcl_clevrer/questions \
+    --frm_prp_path /datasets/dcl_clevrer/proposals \
+    --frm_img_path /datasets/dcl_clevrer \
